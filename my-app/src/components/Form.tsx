@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 
-interface Todo {
+type Todo = {
   id: number;
   title: string;
   contents: string;
   isDone: boolean;
 }
 
-interface Props {
+type AppProps = {
   todos: Todo[];
   setTodos: React.Dispatch<React.SetStateAction<Todo[]>>;
 }
 
-const Form: React.FC<Props> = ({ todos, setTodos }) => {
+const Form: React.FC<AppProps> = ({ todos, setTodos }) => {
   const [title, setTitle] = useState<string>('');
   const [contents, setContents] = useState<string>('');
 
